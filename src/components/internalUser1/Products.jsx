@@ -1,12 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+    const navigate = useNavigate();
     return (
         <div>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores et illo numquam modi libero laborum similique, accusantium eius expedita tempore eos quisquam quasi ad, sint facilis vel, sit reprehenderit earum labore dolor itaque maxime temporibus? Suscipit fugit in praesentium eveniet necessitatibus nisi ut veniam! Placeat numquam est fugit amet dolorum enim necessitatibus omnis modi fugiat maiores itaque eius esse laudantium, natus a corrupti incidunt debitis molestiae fuga unde alias magni rerum ipsa. Culpa eius sequi similique natus voluptatibus, repudiandae ipsa? Excepturi quae in nesciunt rem earum dolorum laudantium doloremque architecto officia, quam atque modi omnis a voluptates possimus sequi vero temporibus vitae at nam labore! Sint, aspernatur. Nam laboriosam, voluptatem et repellat, temporibus amet voluptas aperiam molestiae quibusdam perferendis numquam? Repellendus beatae voluptatibus et, voluptate dolores amet voluptatum mollitia non id aut rem blanditiis laboriosam? Atque, laborum animi rerum deserunt autem veniam sapiente tenetur sint non molestiae architecto, neque, magnam possimus tempore accusantium nostrum ipsa nulla nesciunt ut maiores fugit? Earum atque assumenda exercitationem tempore, magnam officia sequi eligendi fugiat aperiam blanditiis maiores? Esse veritatis quo iusto dolorem. Sapiente explicabo quod praesentium quibusdam a esse rerum, excepturi est laboriosam odio reiciendis. Praesentium pariatur aut enim, fugiat cupiditate voluptate, facere nam sequi incidunt sunt saepe repellendus. Dolores eligendi nihil ipsam obcaecati, mollitia illo blanditiis fugiat fugit temporibus minus quas esse deleniti dignissimos quis sed ut explicabo recusandae, modi nam autem. Nisi ut quod hic sunt. Officia doloribus quos natus perspiciatis inventore dolore fugiat ex recusandae numquam? Cupiditate veniam dicta, vitae consectetur neque qui, fuga odio illo temporibus ab tenetur deserunt quaerat nobis explicabo. Cumque quisquam exercitationem reiciendis quaerat illo tempora, ab dolore quasi autem commodi doloremque voluptas, nobis vel, nemo dolorem corporis in reprehenderit soluta illum nam consectetur rerum officiis! Facilis quas rem excepturi doloremque hic laudantium saepe velit est reprehenderit?
-
+            <ul>
+                {[1, 2, 3, 4].map((e) => (
+                    <li key={e}>
+                        <Link to={`/products/${e}`}> Product {e} </Link>
+                    </li>
+                ))}
+            </ul>
         </div>
-    )
-}
+    );
+};
 
-export default Products
+export default Products;

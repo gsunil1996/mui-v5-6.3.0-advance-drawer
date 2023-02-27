@@ -20,6 +20,11 @@ import InternalUser1Account from "./components/internalUser1/InternalUser1Accoun
 import User2Profile from "./components/internalUser2/User2Profile";
 import User2Account from "./components/internalUser2/User2Account";
 import NotAutorized from "./components/NotAutorized";
+import InternalUser1Dashboard from "./components/internalUser1/InternalUser1Dashboard";
+import ProductDetails from "./components/internalUser1/ProductDetails";
+import NewProduct from "./components/internalUser1/NewProduct";
+import UserDetails from "./components/internalUser1/UserDetails";
+import LoginExistPrivateRoute from "./privateRouting/LoginExistPrivateRoute";
 
 
 function App() {
@@ -42,46 +47,45 @@ function App() {
 
         <Route path="/" element={<Home />} />
 
+        {/* <Route path="/login" element={<LoginExistPrivateRoute />}> */}
         <Route path="/login" element={<Login />} />
+        {/* </Route> */}
 
         {/* internal user 1 routes start */}
 
-        <Route path="/products" element={<PrivateRoute />}>
-          <Route path="/products" element={token === "internal1" ? <Products /> : <NotAutorized />} />
-        </Route>
+        <Route path="/" element={<PrivateRoute />}>
 
-        <Route path="/users" element={<PrivateRoute />}>
-          <Route path="/users" element={token === "internal1" ? <Users /> : <NotAutorized />} />
-        </Route>
+          <Route path="/products">
+            <Route index element={token === "internal1" ? <Products /> : <NotAutorized />} />
+            <Route path=":id" element={token === "internal1" ? <ProductDetails /> : <NotAutorized />} />
+            <Route path="new" element={token === "internal1" ? <NewProduct /> : <NotAutorized />} />
+            <Route path=":id/users" element={token === "internal1" ? <Users /> : <NotAutorized />} />
+            <Route path=":id/users/:id" element={token === "internal1" ? <UserDetails /> : <NotAutorized />} />
+          </Route>
 
-        <Route path="/internal-user1-profile" element={<PrivateRoute />}>
+          <Route path="/users-1-dashboard"
+            element={token === "internal1" ? <InternalUser1Dashboard /> : <NotAutorized />} />
+
           <Route path="/internal-user1-profile"
             element={token === "internal1" ? <InternalUser1Profile /> : <NotAutorized />} />
-        </Route>
 
-        <Route path="/internal-user1-account" element={<PrivateRoute />}>
           <Route path="/internal-user1-account"
             element={token === "internal1" ? <InternalUser1Account /> : <NotAutorized />} />
+
         </Route>
 
         {/* internal user 1 routes end */}
 
+
         {/* internal user 2 routes start */}
 
-        <Route path="/sales" element={<PrivateRoute />}>
+        <Route path="/" element={<PrivateRoute />}>
+
           <Route path="/sales" element={token === "internal2" ? <Sales /> : <NotAutorized />} />
-        </Route>
-
-        <Route path="/marketing" element={<PrivateRoute />}>
           <Route path="/marketing" element={token === "internal2" ? <Marketing /> : <NotAutorized />} />
-        </Route>
-
-        <Route path="/user-2-profile" element={<PrivateRoute />}>
           <Route path="/user-2-profile" element={token === "internal2" ? <User2Profile /> : <NotAutorized />} />
-        </Route>
-
-        <Route path="/user-2-account" element={<PrivateRoute />}>
           <Route path="/user-2-account" element={token === "internal2" ? <User2Account /> : <NotAutorized />} />
+
         </Route>
 
         {/* internal user 2 routes end */}

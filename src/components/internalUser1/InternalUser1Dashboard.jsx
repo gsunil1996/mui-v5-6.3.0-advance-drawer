@@ -1,0 +1,12 @@
+import React from 'react'
+
+const InternalUser1Dashboard = () => {
+    return (
+        <div>
+            <p>InternalUser1Dashboard</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit animi ratione maiores tempore provident. Facilis deleniti delectus iusto impedit perspiciatis suscipit numquam commodi, aspernatur laboriosam cupiditate consequatur fugit praesentium, fugiat odio earum aliquid! Labore rem amet quo vel, officia laboriosam doloribus culpa. Neque mollitia nihil iste optio minus excepturi necessitatibus, et culpa vel. Possimus laboriosam est voluptate quae aspernatur totam, fugiat quod iure harum! Laudantium sed fuga culpa exercitationem cum ipsum architecto praesentium consectetur inventore pariatur magni deleniti non, enim ducimus, qui delectus vel sapiente maxime. Omnis deleniti ut, incidunt perferendis quibusdam eum iste nesciunt aliquid aperiam. Nobis ratione odio cumque natus dolore blanditiis esse reiciendis asperiores? Hic ducimus possimus ullam blanditiis obcaecati sapiente eum quasi, provident excepturi iusto autem, vel praesentium ut distinctio iure cupiditate rerum. Reprehenderit alias perferendis quos, veritatis eum dignissimos magnam autem officiis explicabo consequuntur repudiandae fugit neque culpa tempora beatae amet ratione esse aliquid. Ullam, dolores dolorum quo fugit nesciunt, optio autem dolorem temporibus sunt quod veniam adipisci, quisquam saepe quas qui beatae impedit voluptatibus ipsa repellat. Animi dolore soluta blanditiis quas dolorum nulla autem provident, accusamus porro consequatur mollitia quaerat enim architecto beatae, esse rerum! Commodi, cum quas distinctio obcaecati odio incidunt quam ipsam fuga quos voluptas iusto nulla ea, quidem qui magni. Dolorem reprehenderit perferendis explicabo enim in earum modi dolor repellendus odit numquam qui, ab sunt a voluptas aut dicta eius repellat aspernatur optio deleniti quos? Beatae adipisci repellendus facilis qui, alias cum. Autem, blanditiis assumenda alias ad quia ratione placeat ut. Ducimus reiciendis voluptate atque, molestias, deleniti tempora expedita delectus impedit ut dolores eos odit aut cupiditate alias sapiente suscipit fuga voluptatum soluta perspiciatis voluptas consectetur, labore vitae animi. Assumenda voluptatum, blanditiis, corrupti deserunt quaerat dicta totam architecto dolorum voluptatem iure nihil consequuntur magni odio molestiae iusto eligendi doloremque. In, eum!</p>
+        </div>
+    )
+}
+
+export default InternalUser1Dashboard

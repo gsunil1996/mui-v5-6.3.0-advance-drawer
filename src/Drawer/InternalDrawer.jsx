@@ -10,8 +10,6 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -169,35 +167,38 @@ const InternalDrawer = () => {
                 },
             }}
         >
-            {token == 'internal1' && (
-                <>
-                    <MenuItem onClick={handleUser1Profile}>
-                        <Typography variant="inherit" noWrap>
-                            user 1 Profile
-                        </Typography>
-                    </MenuItem>
-                    <MenuItem onClick={handleUser1Account}>
-                        <Typography variant="inherit" noWrap>
-                            user 1  account
-                        </Typography>
-                    </MenuItem>
-                </>
-            )}
+            {token == 'internal1' &&
+                <MenuItem onClick={handleUser1Profile}>
+                    <Typography variant="inherit" noWrap>
+                        user 1 Profile
+                    </Typography>
+                </MenuItem>
+            }
 
-            {token == 'internal2' && (
-                <>
-                    <MenuItem onClick={handleUser2Profile}>
-                        <Typography variant="inherit" noWrap>
-                            user 2 Profile
-                        </Typography>
-                    </MenuItem>
-                    <MenuItem onClick={handleUser2Account}>
-                        <Typography variant="inherit" noWrap>
-                            user 2  account
-                        </Typography>
-                    </MenuItem>
-                </>
-            )}
+            {token == 'internal1' &&
+                <MenuItem onClick={handleUser1Account}>
+                    <Typography variant="inherit" noWrap>
+                        user 1  account
+                    </Typography>
+                </MenuItem>
+            }
+
+            {token == 'internal2' &&
+                <MenuItem onClick={handleUser2Profile}>
+                    <Typography variant="inherit" noWrap>
+                        user 2 Profile
+                    </Typography>
+                </MenuItem>
+            }
+
+
+            {token == 'internal2' &&
+                <MenuItem onClick={handleUser2Account}>
+                    <Typography variant="inherit" noWrap>
+                        user 2  account
+                    </Typography>
+                </MenuItem>
+            }
 
             <MenuItem onClick={handleMenuClose}>
                 <Typography variant="inherit" noWrap>
@@ -316,91 +317,100 @@ const InternalDrawer = () => {
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         >
-            {token == 'internal1' && (
-                <>
-                    <MenuItem>
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
-                                <MailIcon />
-                            </Badge>
-                        </IconButton>
-                        <Typography variant="inherit" noWrap>
-                            Messages
-                        </Typography>
-                    </MenuItem>
-                    <MenuItem>
-                        <IconButton
-                            size="large"
-                            aria-label="show 17 new notifications"
-                            color="inherit"
-                        >
-                            <Badge badgeContent={17} color="error">
-                                <NotificationsIcon />
-                            </Badge>
-                        </IconButton>
-                        <Typography variant="inherit" noWrap>
-                            Notifications
-                        </Typography>
-                    </MenuItem>
-                    <MenuItem onClick={handleProfileMenuOpen}>
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="primary-search-account-menu"
-                            aria-haspopup="true"
-                            color="inherit"
-                        >
-                            <AccountCircle />
-                        </IconButton>
-                        <Typography variant="inherit" noWrap>
-                            Profile
-                        </Typography>
-                    </MenuItem>
-                </>
-            )}
 
-            {token == 'internal2' && (
-                <>
-                    <MenuItem>
-                        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={1} color="error">
-                                <MessageIcon />
-                            </Badge>
-                        </IconButton>
-                        <Typography variant="inherit" noWrap>
-                            Messages
-                        </Typography>
-                    </MenuItem>
-                    <MenuItem>
-                        <IconButton
-                            size="large"
-                            aria-label="show 17 new notifications"
-                            color="inherit"
-                        >
-                            <Badge badgeContent={1} color="error">
-                                <NotificationImportantIcon />
-                            </Badge>
-                        </IconButton>
-                        <Typography variant="inherit" noWrap>
-                            Notifications
-                        </Typography>
-                    </MenuItem>
-                    <MenuItem onClick={handleProfileMenuOpen}>
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="primary-search-account-menu"
-                            aria-haspopup="true"
-                            color="inherit"
-                        >
-                            <AccountBoxIcon />
-                        </IconButton>
-                        <Typography variant="inherit" noWrap>
-                            Profile
-                        </Typography>
-                    </MenuItem>
-                </>
-            )}
+            {token == 'internal1' &&
+                <MenuItem>
+                    <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                        <Badge badgeContent={4} color="error">
+                            <MailIcon />
+                        </Badge>
+                    </IconButton>
+                    <Typography variant="inherit" noWrap>
+                        Messages
+                    </Typography>
+                </MenuItem>
+            }
+
+            {token == 'internal1' &&
+                <MenuItem>
+                    <IconButton
+                        size="large"
+                        aria-label="show 17 new notifications"
+                        color="inherit"
+                    >
+                        <Badge badgeContent={17} color="error">
+                            <NotificationsIcon />
+                        </Badge>
+                    </IconButton>
+                    <Typography variant="inherit" noWrap>
+                        Notifications
+                    </Typography>
+                </MenuItem>
+            }
+
+            {token == 'internal1' &&
+                <MenuItem onClick={handleProfileMenuOpen}>
+                    <IconButton
+                        size="large"
+                        aria-label="account of current user"
+                        aria-controls="primary-search-account-menu"
+                        aria-haspopup="true"
+                        color="inherit"
+                    >
+                        <AccountCircle />
+                    </IconButton>
+                    <Typography variant="inherit" noWrap>
+                        Profile
+                    </Typography>
+                </MenuItem>
+            }
+
+            {token == 'internal2' &&
+                <MenuItem>
+                    <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                        <Badge badgeContent={1} color="error">
+                            <MessageIcon />
+                        </Badge>
+                    </IconButton>
+                    <Typography variant="inherit" noWrap>
+                        Messages
+                    </Typography>
+                </MenuItem>
+            }
+
+            {token == 'internal2' &&
+                <MenuItem>
+                    <IconButton
+                        size="large"
+                        aria-label="show 17 new notifications"
+                        color="inherit"
+                    >
+                        <Badge badgeContent={1} color="error">
+                            <NotificationImportantIcon />
+                        </Badge>
+                    </IconButton>
+                    <Typography variant="inherit" noWrap>
+                        Notifications
+                    </Typography>
+                </MenuItem>
+            }
+
+            {token == 'internal2' &&
+                <MenuItem onClick={handleProfileMenuOpen}>
+                    <IconButton
+                        size="large"
+                        aria-label="account of current user"
+                        aria-controls="primary-search-account-menu"
+                        aria-haspopup="true"
+                        color="inherit"
+                    >
+                        <AccountBoxIcon />
+                    </IconButton>
+                    <Typography variant="inherit" noWrap>
+                        Profile
+                    </Typography>
+                </MenuItem>
+            }
 
             <MenuItem>
                 <Button variant="contained" color="error" size='large' onClick={() => handleLogout()} >Logout</Button>
@@ -414,15 +424,15 @@ const InternalDrawer = () => {
 
     const navItems1 = [
         {
-            text: "Products",
-            icon: <InboxIcon />,
+            text: "User 1 Dashboard",
+            icon: <MailIcon />,
             indexes: 0,
         },
         {
-            text: "Users",
-            icon: <MailIcon />,
+            text: "Products",
+            icon: <InboxIcon />,
             indexes: 1,
-        }
+        },
     ];
 
     const navItems2 = [
@@ -451,10 +461,10 @@ const InternalDrawer = () => {
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
         if (index == 0 && token == 'internal1') {
-            navigate('/products')
+            navigate('/users-1-dashboard')
         }
         else if (index == 1 && token == 'internal1') {
-            navigate('/users')
+            navigate('/products')
         }
         else if (index == 0 && token == 'internal2') {
             navigate('/sales')
@@ -467,10 +477,10 @@ const InternalDrawer = () => {
     React.useEffect(() => {
         let total_url = window.location.pathname.split('/')
         let url = total_url[1];
-        if (url == "products" && token == 'internal1') {
+        if (url == "users-1-dashboard" && token == 'internal1') {
             setSelectedIndex(0)
         }
-        else if (url == "users" && token == 'internal1') {
+        else if (url == "products" && token == 'internal1') {
             setSelectedIndex(1)
         }
         else if (url == "sales" && token == 'internal2') {
@@ -492,12 +502,9 @@ const InternalDrawer = () => {
     }, [pageTitlePath])
 
     const handleDrawerOpen = () => {
-        setOpen(true);
+        setOpen(!open);
     };
 
-    const handleDrawerClose = () => {
-        setOpen(false);
-    };
 
     const handleLogout = () => {
         localStorage.clear();
@@ -628,9 +635,9 @@ const InternalDrawer = () => {
                 open={open}
             >
                 <DrawerHeader>
-                    <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                    </IconButton>
+                    <div style={{ width: "100%", textAlign: "center" }} >
+                        <h3 style={{ color: "#1976D1" }} >Demo</h3>
+                    </div>
                 </DrawerHeader>
                 <Divider />
 

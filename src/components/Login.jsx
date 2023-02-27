@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
@@ -11,7 +11,7 @@ const Login = () => {
     const handleInternalLogin1 = () => {
         localStorage.setItem("type", "internal1");
         setLoginState(!loginState);
-        navigate('/products')
+        navigate('/users-1-dashboard')
     }
 
     const handleInternalLogin2 = () => {
